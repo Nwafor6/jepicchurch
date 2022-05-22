@@ -1,0 +1,41 @@
+{% extends 'partials/base.html'%}
+{%load static%}
+
+{% block content%}
+
+
+  <!-- End of navs -->
+<!-- Body section -->
+<div class="container-fluild">
+  <div class="container-fluild mb-2 img-fluid bg" style="background-image:  background-position: center; height: 60vh; position: relative;background-size: cover;">
+    <h2 class="text-light ">Gallery</h2>
+  </div>
+  <div class="container mt-5">
+   <div class="row">
+     <div class="col-md-9">
+      <p >Click Image to see collection</p>
+        <div class="row mb-2">
+          {% for title in event%} 
+          <div class="col-sm-12 col-md-4 event">      
+                  <a href="{%url 'gallery-image' title.pk%}"><img src="{{title.page_image.url}}" class="img-fluid rounded " ></a>
+                  <h6>{{title.title}} collections</h6>
+          </div>
+          {%endfor%}
+     </div>
+   </div>
+     <div class="col-md-3 mb-2">
+       <div class="card">
+         <h5 class="text-center p-2">Upcoming Events</h5>
+         <hr style="border: 0.1rem solid yellow; width: 20%;" class="m-3">
+         {% include 'partials/upcoming-event.html'%}
+       </div>
+     </div>
+   </div>
+  </div>
+</div>
+{%for image in images%}
+<img src="{{image.image.url}}" class="img-fluid">
+{%endfor%}
+
+
+{% endblock%}

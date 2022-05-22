@@ -1,0 +1,44 @@
+{% extends 'partials/base.html'%}
+{%load static%}
+
+{% block content%}
+
+  <!-- End of navs -->
+<!-- Body section -->
+<div class="container-fluild">
+  <div class="container-fluild mb-2 bg" style="background-image: background-position: center; height: 60vh; position: relative;background-size: cover;">
+    <h2 class="text-light">Our Children Ministry</h2>
+  </div>
+  <div class="container mb-2">
+   <div class="row">
+     <div class="col-md-9 mb-2">
+       <h4>Submit A prayer Request</h4><hr style="border: 0.1rem solid yellow; width: 20%; width:4%; margin: 0;">
+       <div class="form p-3 bg-light">
+         <form>
+           <input type="text" name="username" placeholder="Name" class="form-control"><br>
+           <input type="email" name="username" placeholder="Email" class="form-control"><br>
+           <input type="text" name="username" placeholder="Subject of the prayer Point" class="form-control"><br>
+           <textarea placeholder="Prayer points" class="form-control"></textarea><br>
+           <input type="submit" class="btn btn-xs btn-outline-warning">
+         </form>
+       </div>
+      
+      
+     </div>
+     <div class="col-md-3">
+       <div class="card">
+         <h5 class="text-center p-2">Upcoming Events</h5>
+         <hr style="border: 0.1rem solid yellow; width: 20%;" class="m-3">
+         {% include 'partials/upcoming-event.html'%}
+       </div>
+     </div>
+   </div>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock%}

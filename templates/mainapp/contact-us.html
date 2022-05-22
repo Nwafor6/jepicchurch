@@ -1,0 +1,50 @@
+{% extends 'partials/base.html'%}
+{%load static%}
+
+{% block content%}
+<!-- Body section -->
+<div class="container-fluild">
+  <div class="container-fluild mb-2 bg" style="background-image: background-position: center; height: 60vh; position: relative;background-size: cover;">
+    <h2 class="text-light">Our History</h2>
+  </div>
+  <div class="container mt-5 ">
+    <div class="row">
+      <div class="col-md-6 jumbotron bg-bg-light">
+        <h3 class="text-warning text-center">Information</h3>
+        <div class="card p-4 mb-4">
+          orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        </div>
+        <div class="card p-4 mb-4">
+          <p><i class=" fas fa-phone fa-rotate-90 text-warning"></i> :0801234566 0901234556 0903466778899</p>
+          <p><i class=" fas fa-phone fa-rotate-90 text-warning"></i> :0801234566 0901234556 0903466778899</p>
+        </div>
+
+        <div class="card p-4 mb-4">
+          <p>5, Hassan Street, Imedu Olori Road Mowe, Ogun State Nigeria.</p>
+        </div>
+        <div class="card p-4 mb-4">
+        <p>Mail: info@jepiccenter.org</p>
+        </div>
+        <button class="btn btn-block btn-outline-light">Contact Us Now !!!!</button>
+
+      </div>
+
+      <div class="col-md-6 mb-2">        
+        <h3>Contact Us</h3>
+         <div class="form p-3 bg-light">
+         <form>
+           <input type="text" name="username" placeholder="Name" class="form-control"><br>
+           <input type="email" name="username" placeholder="Email" class="form-control"><br>
+           <input type="text" name="username" placeholder="Subject of the prayer Point" class="form-control"><br>
+           <textarea placeholder="Prayer points" class="form-control"></textarea><br>
+           <input type="submit" class="btn btn-xs btn-outline-warning">
+         </form>
+       </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+{% endblock%}
+

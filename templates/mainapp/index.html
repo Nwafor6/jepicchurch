@@ -1,0 +1,165 @@
+{% extends 'partials/base.html'%}
+{%load static%}
+
+
+
+
+{% block content%}
+
+<div class="container-fluild">
+  <div class="container-fluild" style="background-image: url({% static 'images/bg2.jpg'%}) ;background-position: center; height: 80vh; position: relative;">
+    <div class="welcome-Note">
+      <h1 class="text-light">Worship With Us <br> This Year</h1>
+      <p class="text-light">
+        We love having you around. We invite you to our weekly services that take place in our<br>
+        branches near you. We are happy to recieve you and we are<br>
+        sure you will have a wonderful time with us.
+      </p>
+      <a class="btn btn-outline-primary btn-outline-white text-white" href="">Visit us Today</a>
+    </div>
+  </div>
+  <div class="container mt-5 mb-5">
+    <div><img src="{% static 'images/sunday-worship.jpg'%}" style="width: 100%; height: 70vh;"></div>
+    <div class="welcome-Adress-by-pastor mt-5">
+    <h1>Welcome to Jesus Power <br> International Christain Center</h1>
+    <h6>Message from the General Overseer - Rev. Sam & Rev Olabisi Aboyeji</h6>
+    <p class="mt-3">Blessed be the Lord God Almighty for His gracious provisions in our lives.<br> As individuals, as families and as a church organization,<br> we have surely experienced manifold blessings of God.<br> To Him alone be all the glory, honour, praise, power, dominion and majesty, now and forevermore.<br>br
+      The year 2020 has been eventful.<br> I indeed appreciate the testimonies of Divine All-Round Sufficiency which God has given<br> to us in various ways, in different dimensions and at varying levels.</p>
+      <a class="btn btn-warning" href="">Read More</a>
+    </div>
+  </div>
+  <!-- Annoucemnet section -->
+  <div class="container mb-5">
+    <div>
+    <h3 class="text-right">Event Name</h3>
+    {% include 'partials/upcoming-event.html'%}
+    </div>
+    <a class="btn btn-light border border-warning" href="">JOIN US</a>
+  </div>
+
+  <!-- Main Programs -->
+      <div class="container-fluid bg-light">
+      <div class="container-fluid p-3 p-md-4">
+        <h3 class="mb-5">Our Main Programmes</h3>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 col-xl-3  ">
+            <div class="card shadow p-3 mx-auto mb-5 bg-white rounded" style="max-width: 384px;">
+              <img src="{% static 'images/cfm.png'%}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <a class="btn text-light card-footer bg-dark" href="">Read More</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3 ">
+            <div class="card shadow p-3 mx-auto mb-5 bg-white rounded" style="max-width: 384px;">
+              <img src="{% static 'images/cfm.png'%}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <a class="btn text-light card-footer bg-dark" href="">Read More</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3 ">
+            <div class="card shadow p-3 mx-auto mb-5 bg-white rounded" style="max-width: 384px;">
+              <img src="{% static 'images/cfm.png'%}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <a class="btn text-light card-footer bg-dark" href="">Read More</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card shadow p-3 mx-auto mb-5 bg-white rounded" style="max-width: 384px;">
+              <img src="{% static 'images/cfm.png'%}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <a class="btn text-light card-footer bg-dark" href="">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of programmes -->
+       <!-- Implement payment api here -->
+      <div class="container-fluild  p-5" style="background-color: white;">
+        <div class="container">
+            <h5 class="text-center">Give to his House Mal 3:3</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    
+      <div class="container-fluild">
+        <h4 class="text-center p-2">Testimonies</h4>
+        <div id="carouselExampleCaptions" class="carousel slide m-1 pb-3" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'images/jepic-col.jpg'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Healing</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/jepic-col.jpg'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Break Through</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+               <div class="container-fluild" style="background-image: url({% static 'images/bg2.jpg'%}) ;background-position: center; height: 70vh; position: relative;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="text-light">Join The Family<br>of<br> Christ Today</h2>
+                  <a class="btn btn-outline-warning" href="">Join</a>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </button>
+        </div>
+      </div>
+
+             <!-- end of the testomies -->
+          </div>
+      </div>
+
+{% endblock%}
+
+
+
+
+
+

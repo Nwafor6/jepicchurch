@@ -1,0 +1,151 @@
+{% load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+  <!--   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,300&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <title>{%block title%} {%endblock%}</title>
+
+<style>
+ *{
+    font-family: 'Poppins';
+}
+
+  .welcome-Note{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+  }
+  .welcome-Note a{
+    text-decoration: none;
+  }
+  .card-img-top:hover{
+    background: yellow;
+    transition: 1sec;
+  }
+  .bg{
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url({% static 'images/man-praying.JPG' %});
+  }
+  .bg h2{
+    padding-top:7rem;
+    padding-left:0.5rem;
+
+  }
+  .gallery{
+    padding: 10rem;
+  }
+  @media(max-width: 700px){
+    .gallery{
+      padding-top: 7rem;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 6px;
+  }
+  }
+/*.event img{
+  width: 0%;
+  height: 50%;
+}*/
+</style>
+  </head>
+  <body>
+
+      <!-- nav section -->
+      {% include 'partials/nav.html'%}
+      <!-- end nav -->
+
+
+      <!-- body section -->
+      {%block content%} {% endblock%}
+      <!-- endbody section -->
+
+      <!-- Footer section -->
+    <div class="container-fluild bg-dark">
+      <div class="container pt-5 pb-5 text-light">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="{% static 'images/logo.jpg'%}" width="250" height="150">
+            <p class="pt-4 text-light">Our belief is based on core biblical truths we call the 22 tenets of faith. We believe in The Holy Scripture, The Plan of Redemption, The Baptism of the Holy Spirit, Moderation, Divine Healing, Heaven, Civil Government and lots of other amazing truths. <a class="text-light" href="">Read More</a></p>
+          </div>
+          <div class="col-md-3 ">
+            <h5>Featured Links</h5>
+            <ul class="list-inline ">
+              <li><a class="text-light" href="{% url 'contact-page'%}"><i class="fas fa-angle-right text-warning"></i> Contact us</a></li>
+              <li><a  class="text-light" href=""><i class="fas fa-angle-right text-warning"></i> About Us</a></li>
+              <li><a class="text-light"  href=""><i class="fas fa-angle-right text-warning"></i> Follow us </a></li>
+              <li><a class="text-light"  href="{% url 'prayer-request'%}"><i class="fas fa-angle-right text-warning"></i> Prayer Request</a></li>
+              <li><a class="text-light"  href="{% url 'children-ministry'%}"><i class="fas fa-angle-right text-warning"></i> Our Children Ministry</a></li>
+              <li><a class="text-light"  href=""><i class="fas fa-angle-right text-warning"></i> Make Donations</a></li>
+              
+            </ul>
+          </div>
+          <div class="col-md-3"><!-- images/logo.jpg -->
+            <h5>Information</h5>
+            <p>5, Hassan Street, Imedu Olori Road Mowe, Ogun State Nigeria.</p>
+            <p><i class="  fas fa-phone fa-rotate-90"></i>  0801234566 0901234556 0903466778899</p>
+            <p>Mail: info@jepiccenter.org</p>
+           
+          </div>
+          <div class="col-md-3 ">
+            <h5>Gallery</h5>
+            <div class="row">
+              <div class="col-sm-4">
+              <ul class="list-inline list-group list-group-horizontal">
+                {% for image in footer_gallery%}
+                {% if forloop.counter < 5%}
+                <li> <a href="{% url 'gallery'%}"> <img src="{{image.image.url}}" width="50" height="50" class="pr-1"></a></li>
+                {% endif%}
+                {%endfor%}
+              </ul>
+               <ul class="list-inline list-group list-group-horizontal mt-2">
+                 {% for image in footer_gallery%}
+                {% if forloop.counter > 4%}
+                <li> <a href="{% url 'gallery'%}"> <img src="{{image.image.url}}" width="50" height="50" class="pr-1"></a></li>
+                {% endif%}
+                {%endfor%}
+              </ul>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="container-fluild bg-light">
+        <p class=" text-center p-3 ml-4 ">Designed by Christain Glory<i class="fa-solid fa-arrow-down-big-small"></i></p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<div class="container" >
+	{% for event in events%}
+	<h5>{{event.title}}</h5><hr>
+	<h6>Date: {{event.program_date}}</h6><hr>
+	<h6>Time: {{event.program_date|truncatechars:23 |slice:" 11:19"}} Am </h6>
+	<a class="btn btn-outline-warning bn-xs mb-2" href="{% url 'event-detail' event.slug %}">Read More</a>
+	{%empty%}
+	{%endfor%}
+</div>
+

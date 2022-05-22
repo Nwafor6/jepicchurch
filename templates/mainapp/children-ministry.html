@@ -1,0 +1,47 @@
+{% extends 'partials/base.html'%}
+{%load static%}
+
+{% block content%}
+
+  <!-- End of navs -->
+<!-- Body section -->
+<div class="container-fluild">
+  <div class="container-fluild mb-2 bg" style="background-image: background-position: center; height: 60vh; position: relative;background-size: cover;">
+    <h2 class="text-light">Our Children Ministry</h2>
+  </div>
+  <div class="container mt-5">
+   <div class="row">
+     <div class="col-md-9">
+       <h4>Our Children Ministry</h4>
+       <img src="{% static 'images/children.jpg'%}" class="img-fluid mb-3 ">
+       <div class="jumbotron">
+          <p>There Forgotten by much of the world, millions of boys and girls struggle to survive under the most desperate of circumstances. Many must eke out a living on their own, begging on the streets, scavenging through trash, or working in sweatshops. The national children ministry gives these children a fresh start on a better life, while offering a new beginning in Christ. The ministry comprises of children, children teachers and their coordinators from all Foursquare Gospel Church in Nigeria and members comprises of all the children of the churches between age 0 to 13.
+       </p>
+       <h5 class="text-danger">Functions</h5>
+       <p>
+         1. Minister and take proper care of the children of the Church.<br>
+         2. Develop a system of tracking and follow-up of the children so that we can evaluate their developmental progress.<br>
+         3. Maintain ongoing correspondence with parents of the children through periodical meetings, mailings to keep them abreast of the direction children ministry are heading to.<br>
+         4. Organize and manage the children church.<br>
+          5.Use divers methodology and teaching aids to minister and teach the children.<br>
+          6.Plan various activities to minister to the children of the Church.<br>
+          7.Organize Christmas Party, Children Day Party and other occasional and festive outings for the children.<br>
+          8.Prepare and present the children for special presentation and ministration during National Convention and other National programs.
+        
+        </p>
+       </div>
+      
+     </div>
+     <div class="col-md-3 mb-2">
+       <div class="card">
+         <h5 class="text-center p-2">Upcoming Events</h5>
+         <hr style="border: 0.1rem solid yellow; width: 20%;" class="m-3">
+         {% include 'partials/upcoming-event.html'%}
+       </div>
+     </div>
+   </div>
+  </div>
+</div>
+
+
+{% endblock%}
